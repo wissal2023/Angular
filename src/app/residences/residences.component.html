@@ -1,0 +1,20 @@
+
+<ul class="list-groupe">
+    <li class="list-groupe-item" *ngFor="let R of listResidences">
+        <img class="img" [src]="R.image" alt="">  {{R.name}}
+        <button class="btn btn-outline-success btn-sm" (click)="showAppartment(R.id)">show appartments</button>
+    </li>  
+</ul>
+
+<ul *ngIf="list.length>0; else noApartmentsFound ">
+    <li *ngFor="let A of list">{{A.appartNum}}
+        <button class="btn btn-outline-info" (click)="toggleLike(A)">
+            {{ A.isLiked ? 'Unlike' : 'Like' }}
+        </button>       
+    </li>
+    <input type="number" placeholder="Search by surface" [(ngModel)]="surfaceFilter" (input)="filterApartmentsBySurface()" />
+</ul>
+<ng-template #noApartmentsFound>
+    <li>No Apartment found </li>
+</ng-template>
+

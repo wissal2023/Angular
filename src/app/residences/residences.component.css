@@ -1,0 +1,19 @@
+/* residences.component.css */
+
+.list-groupe {
+    border: 2px solid #ddd; /* Add a border to the ul */
+    padding: 10px; /* Add padding for better visual appearance */
+  }
+  
+  .list-groupe-item {
+    border-bottom: 6px solid #ddd; /* Add a border to each li */
+    padding: 5px; /* Add padding for better visual appearance */
+    list-style-type: none; /* Remove the default list item bullets */
+  }
+  
+  img {
+    max-width: 5%; /* Ensure the image doesn't exceed its container's width */
+    height: 5%; /* Maintain the aspect ratio of the image */
+    border-radius: 5px; /* Add border-radius for a rounded appearance, adjust as needed */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow, adjust as needed */
+  }
