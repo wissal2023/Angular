@@ -1,0 +1,13 @@
+
+<ul *ngIf="list.length>0; else noApartmentsFound ">
+    <li *ngFor="let A of list">{{A.appartNum}}
+        <button class="btn btn-success" > Like </button>  
+        <button class="btn btn-info btn-sm" [routerLink]="['/detailsApp',A.id]">detail </button>
+     
+    </li>
+  </ul>
+
+<ng-template #noApartmentsFound>
+    <li>No Apartment found </li> 
+    <button class="btn btn-outline-warning btn-sm" [routerLink]="['/addAppartment',id]">add new Apartment </button>
+</ng-template>
